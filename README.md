@@ -7,3 +7,4 @@ Clean up the 'company' column so all of the misspellings of the brand names are 
 CODE
 
 refine_original <-transform(refine_original, company=tolower(company))
+
