@@ -19,3 +19,11 @@ You'd like to view the customer information on a map. In order to do that, the a
 
 CODE
 refine_original <-unite(refine_original, "full_address", address, city, country, sep = ",")
+
+5: Create dummy variables for company and product category
+
+Both the company name and product category are categorical variables i.e. they take only a fixed set of values. In order to use them in further analysis you need to create dummy variables. Create dummy binary variables for each of them with the prefix company_ and product_ i.e.,
+
+    Add four binary (1 or 0) columns for company: company_philips, company_akzo, company_van_houten and company_unilever.
+
+    Add four binary (1 or 0) columns for product category: product_smartphone, product_tv, product_laptop and product_tablet.
