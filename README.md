@@ -21,6 +21,11 @@ Separate the product code and product number into separate columns i.e. add two 
 CODE
 refine_original <-separate(refine_original, Product.code...number, c("product_code", "product__number"), sep = "-")
 
+3: 3: Add product categories
+
+CODE:
+refine_original <- mutate(refine_original, "product_category" = ifelse(product_code == "p", "Smartphone", "")) %>% mutate("product_category" = ifelse(product_code == "x", "Laptop", product_category)) %>% mutate("product_category" = ifelse(product_code == "q", "Tablet", product_category)) %>% mutate("product catagory" = ifelse(product_code == "v", "TV", product_category)) %>% mutate("product catagory" = ifelse(product_code == "v", "TV", product_category))
+
 4: Add full address for geocoding
 
 You'd like to view the customer information on a map. In order to do that, the addresses need to be in a form that can be easily geocoded. Create a new column full_address that concatenates the three address fields (address, city, country), separated by commas.
